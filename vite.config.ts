@@ -22,13 +22,4 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  // server: {
-  //   proxy: {
-  //     "/api": {
-  //       target: "http://localhost:8000",
-  //       changeOrigin: true,
-  //       // rewrite: (path) => path.replace(/^\/api/, ""),
-  //     },
-  //   },
-  // },
 });
