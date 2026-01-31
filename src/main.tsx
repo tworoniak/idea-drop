@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AuthProvider } from "./context/AuthContext.tsx";
+import ScrollToTopButton from "./components/ScrollToTopButton.tsx";
 
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
@@ -44,6 +45,7 @@ if (rootElement && !rootElement.innerHTML) {
       <QueryClientProvider client={queryClient}>
         <StrictMode>
           <RouterProvider router={router} />
+          <ScrollToTopButton />
         </StrictMode>
       </QueryClientProvider>
     </AuthProvider>,
